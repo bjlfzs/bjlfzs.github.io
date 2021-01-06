@@ -20,7 +20,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](https://github.com/bjlfzs/bjlfzs.github.io/blob/main/messy/testluo.gif)
+[Link](url) and ![Image](/messy/testluo.gif)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
