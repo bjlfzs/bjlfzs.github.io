@@ -4,7 +4,7 @@ He is a third-year undergraduate student in Beihang University(BUAA), majoring i
 
 
 
-![MyPhoto](https://github.com/bjlfzs/bjlfzs.github.io/blob/main/messy/test213.jpg)
+![MyPhoto](https://github.com/bjlfzs/bjlfzs.github.io/raw/main/messy/test213.jpg)
 ```markdown
 Syntax highlighted code block
 
