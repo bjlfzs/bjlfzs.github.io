@@ -1,4 +1,4 @@
-![MyPhoto](https://github.com/bjlfzs/bjlfzs.github.io/raw/main/messy/test213.jpg)
+![MyPhoto](https://github.com/bjlfzs/bjlfzs.github.io/raw/main/messy/test.jpg)
 
 # Biography
 
@@ -7,6 +7,7 @@ He is a third-year undergraduate student in Beihang University(BUAA), majoring i
 He is doing some data work on the basis of visual dialog.
 
 ## Interests
-Visual dialog
 ```markdown
+Visual dialog
+VQA
 ```
