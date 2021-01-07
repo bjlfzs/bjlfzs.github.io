@@ -2,15 +2,15 @@
 
 # Biography
 
-## Brief Introduction
+## Introduction
 
-```markdown 
 He is a third-year undergraduate student in Beihang University(BUAA), majoring in Automation Science and Electrical Engineering and minoring in mathematics.
 
 He is doing some data work on the basis of visual dialog.
-```
+
+
 ## Interests
-```markdown
+
 Visual dialog
+
 VQA
-```
