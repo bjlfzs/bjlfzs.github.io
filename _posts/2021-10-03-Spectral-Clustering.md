@@ -10,13 +10,18 @@ mermaid: true
 
 最近正在进行对于multiview clustering的学习，其中着重学习了谱聚类以及相关的算法，在这里先简单总结一下，随着学习的深入再慢慢补充。
 
-# 谱聚类
+<h3 data-toc-skip>概述</h3>
 
-<h2 data-toc-skip>H2 - heading</h2>
+<h3>距离度量</h3>
 
-<h3 data-toc-skip>H3 - heading</h3>
+其主要解决如何将采样点数据构造成图结构的问题。其中两点间的距离有三种构图方式:
 
-<h4>H4 - heading</h4>
+\1. $ε$ -neighborhood
+\2. k-nearest neighborhood
+\3. fully connected
+
+    
+
 ---
 <br>
 
