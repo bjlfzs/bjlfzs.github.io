@@ -3,7 +3,7 @@ title: 谱聚类
 author: theq Yang
 date: 2021-10-03 13:00:00 +0800
 categories: [Blogging, Algorithm]
-tags: [typography]
+tags: [Spectral Graph]
 math: true
 mermaid: true
 ---

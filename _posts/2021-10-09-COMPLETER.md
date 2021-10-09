@@ -3,7 +3,7 @@ title: COMPLETER--Incomplete Multi-view Clustering via Contrastive Prediction
 author: theq Yang
 date: 2021-10-09 19:00:00 +0800
 categories: [Blogging, Article]
-tags: [Article]
+tags: [MvC, Information Theory]
 math: true
 mermaid: true
 ---
@@ -27,6 +27,8 @@ mermaid: true
 其中实线框表示第一个视图（模态）里包含的信息$$X^1$$；虚线框表示第二个视图（模态）里包含的信息$$X^2$$，左边的蓝色+灰色是$$X^1$$的representation$$Z^1$$，灰色+右边的蓝色是$$Z^2$$，即$$X^2$$的representation。注意这里两块不是连续的，他俩的并集作为$$Z^2$$，这令我瞪了好久。
 
 这里的表征用Autoencoder取中间层得到的，在这里不仅要优化互信息$$I(Z^1,Z^2)$$最大，而且要使得$$H(Z^i|Z^j)$$最小，这样的理想情况是图就变成了右边的样子，即$$Z^1$$与$$Z^2$$完全包含，其互信息为$$X^1$$和$$X^2$$的公共区域，且两边没有多余的信息。 这样做可以discard the inconsistent information across-views, and thus the consistency could be further improved.
+
+
 
 
 
