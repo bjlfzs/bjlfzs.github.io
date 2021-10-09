@@ -1,5 +1,5 @@
 ---
-title: COMPLETER: Incomplete Multi-view Clustering via Contrastive Prediction
+title: COMPLETER--Incomplete Multi-view Clustering via Contrastive Prediction
 author: theq Yang
 date: 2021-10-09 19:00:00 +0800
 categories: [Blogging, Article]
@@ -20,9 +20,15 @@ mermaid: true
 
 针对上述挑战，受近期Tsai等在ICLR2021上发表的工作[1]所启发，本文提供了一个新的不完全多视图聚类见解，即不完全多视图聚类中的数据恢复和一致性学习是一体两面的，两者可统一到信息论的框架中。基于上述观察，论文提出了对偶预测范式并将其与对比学习结合，通过一个新的损失函数实现了跨视图一致性与可恢复性的联合优化。大量的实验验证了所提出的损失函数的有效性。
 
+![representation.png](https://i.postimg.cc/FKK4N2MG/representation.png)]
+
+这个图很有意思，画的让我难以理解，经过小康师兄的提点，又补习了一下信息论，终于理解了。
+
+其中实线框表示第一个视图（模态）里包含的信息$$X^1$$；虚线框表示第二个视图（模态）里包含的信息$$X^2$$，左边的蓝色+灰色是$$X^1$$的representation$$Z^1$$，灰色+右边的蓝色是$$Z^2$$，即$$X^2$$的representation。注意这里两块不是连续的，他俩的并集作为$$Z^2$$，这令我瞪了好久。
+
+这里的表征用Autoencoder取中间层得到的，在这里不仅要优化互信息$$I(Z^1,Z^2)$$最大，而且要使得$$H(Z^i|Z^j)$$最小，这样的理想情况是图就变成了右边的样子，即$$Z^1$$与$$Z^2$$完全包含，其互信息为$$X^1$$和$$X^2$$的公共区域，且两边没有多余的信息。 这样做可以discard the inconsistent information across-views, and thus the consistency could be further improved.
 
 
-[![representation.png](https://i.postimg.cc/76kdT7CB/representation.png)](https://postimg.cc/HJ6Bqr95)
 
 其主要解决如何将采样点数据构造成图结构的问题。其中两点间的距离有三种构图方式:
 
