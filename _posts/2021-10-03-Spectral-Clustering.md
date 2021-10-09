@@ -2,7 +2,7 @@
 title: 谱聚类
 author: theq Yang
 date: 2021-10-03 13:00:00 +0800
-categories: [Blogging, Demo]
+categories: [Blogging, Algorithm]
 tags: [typography]
 math: true
 mermaid: true
@@ -20,7 +20,7 @@ mermaid: true
 \2. k-nearest neighborhood
 \3. fully connected
 
-    
+​    
 
 ---
 <br>
