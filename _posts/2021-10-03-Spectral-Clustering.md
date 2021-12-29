@@ -42,7 +42,19 @@ mermaid: true
 
 <h3>Laplace矩阵</h3>
 
-提到算法的有效性，首先需要介绍Laplace矩阵的性质。从《计算科学与工程》这本书定义的，
+提到算法的有效性，首先需要介绍Laplace矩阵的性质。首先，在数学意义上，拉普拉斯算子是计算梯度的散度。众所周知，在多变量函数中，梯度是一个向量场，揭示了函数下降最快的方向；而散度则是判断该点是否有源，即流入和流出是否相等，在该链接中也有讲解[[Link]](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives)。所以梯度的散度可以理解成给某一个点以一个微小的扰动，整体得到的增益。
+
+在此基础上，引入了图的Laplace Matrix。
+
+假设具有$$N$$个节点的图 $$G$$ ，图上每点定义的特征函数$$f$$是$$N$$维向量：$$f = (f_1, f_2,...,f_N)$$，其中$$f_i$$为函数$$f$$在图中节点$$i$$ 处的函数值，在谱聚类中$$f$$又可以理解成聚类指示矩阵。而对于某一个$$f_i \neq 0$$，可以看作是对节点$$i$$进行扰动，它可能变为任意一个与之直接相邻的节点$$j \in Neighbor(i)$$。
+
+对$$f$$函数做拉普拉斯
+
+可以将扰动看成加入一个势，$$\Delta f_i = \sum_{j \in Neighbor(i)} W_{i,j}(f_i - f_j)$$ 体现加入该势后整张图在一时刻的变化。譬如对于下面这个图
+
+![SC-1.png](https://postimg.cc/sQQqrdsh)
+
+其Laplace Matrix为
 
 $$$$
 
