@@ -58,7 +58,7 @@ mermaid: true
 
 譬如对于下面这个图，假设各条边权为1，
 
-<img src="https://i.postimg.cc/C1mgbS2m/SC-1.png" alt="SC-1.png" style="zoom:33%;" />
+<img src="https://i.postimg.cc/C1mgbS2m/SC-1.png" alt="SC-1.png" style="zoom:50%;" />
 
 其Laplace Matrix为：
 $$
@@ -83,7 +83,8 @@ $$
 2. 由于$L$是对称矩阵，由性质1也可以看出，$L$是半正定阵。
 3. 全1向量$\textbf{1}$是其特征向量，对应特征值为0。
     可以用$f_i=f_j$带入性质1中的式子验证，也可以用$L$矩阵的性质证明。
-4. 
+
+
 ## 算法实现
 
 1. 根据数据构造一个图的affinity matrix，图中每一个节点对应一个数据点，affinity matrix中每条边连接两个点，其权重代表数据间的相似度。在邻接矩阵的形式下为$W$，其有三种不同的构图方式(见下文)，也可以直接建出有$k$个强连通分量的图。
