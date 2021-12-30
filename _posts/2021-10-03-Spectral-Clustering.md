@@ -113,7 +113,7 @@ $$
           0 & others
       \end{array}
   % \end{align*}
-  \right.
+  \right..
 $$
 
 优化上式最小割问题等价于优化如下式子
