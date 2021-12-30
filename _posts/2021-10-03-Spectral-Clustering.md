@@ -107,16 +107,15 @@ $$min \quad cut(A_1, A_2, ... , A_k).$$
 假设$F_{n \times k}$是聚类指示矩阵，表示第i个样本被分在了第j类。
 $$
     F_{i, j} = \left\{
-      % \begin{align*}
       \begin{array} {rcl}
           1 & if ~ i_{th} ~ sample ~ in ~ j_{th} ~ cluster \\
           0 & others
       \end{array}
-  % \end{align*}
   \right..
 $$
 
 优化上式最小割问题等价于优化如下式子
+
 $$\min_F \quad trace(F^T L F)$$
 
 Proof：
@@ -147,6 +146,7 @@ $$RatioCut (A_1, A_2, ... , A_k) = \frac{1}{2} \sum_{i=1}^k \frac{W(A_i, \bar{A_
 <h3>NCut</h3>
 
 $$NCut (A_1, A_2, ... , A_k) = \frac{1}{2} \sum_{i=1}^k \frac{W(A_i, \bar{A_i})}{vol(A_i)} = \frac{1}{2} \sum_{i=1}^k \frac{cut(A_i, \bar{A_i})}{vol(A_i)}  $$
+
 这里的$vol(A_i)$是$A_i$里所有边的度之和，即$vol(A_i) = \sum_{x \in A_i} d_{xx}$。这里采用内部的权值之和来进行约束，又是一种特殊的抑制特解的方式。
 
 ## Lists
