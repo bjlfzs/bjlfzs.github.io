@@ -18,9 +18,9 @@ timezone: Asia/Beijing
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title:bjlfzs                          # the main title
+title:Chirpy                          # the main title
 
-tagline:   # it will display as the sub-title
+tagline: A  text-focused Jekyl theme # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -31,7 +31,7 @@ description: >-                        # used by seo meta and the atom feed
 url: ''
 
 github:
-  username: Chirpy        # change to your github username
+  username: bjlfzs        # change to your github username
 
 twitter:
   username: twitter_username            # change to your twitter username
