@@ -1,5 +1,5 @@
 ---
-title: COMPLETER--Incomplete Multi-view Clustering via Contrastive Prediction
+title: 如何修改Jekyll中的设置
 author: theq Yang
 date: 2021-12-31 17:00:00 +0800
 categories: [Blogging, Article]
