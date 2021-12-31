@@ -20,7 +20,7 @@ timezone: Asia/Beijing
 
 title:bjlfzs                          # the main title
 
-tagline: Trying to handle this blog.  # it will display as the sub-title
+tagline:   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -31,7 +31,7 @@ description: >-                        # used by seo meta and the atom feed
 url: ''
 
 github:
-  username: bjlfzs         # change to your github username
+  username: Chirpy        # change to your github username
 
 twitter:
   username: twitter_username            # change to your twitter username
