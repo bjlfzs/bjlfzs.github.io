@@ -18,9 +18,9 @@ timezone: Asia/Beijing
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 'bjlfzs's Blog'                        # the main title
+title: bjlfzs's Blog                        # the main title
 
-tagline: 'Try to know how a blog works.'  # it will display as the sub-title
+tagline: Try to know how a blog works.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
