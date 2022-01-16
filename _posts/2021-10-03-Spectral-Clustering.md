@@ -173,9 +173,13 @@ $$
 在一些文章里会说是对次小的特征值对应的特征向量来进行聚类，那样是二分类任务；并且由于拉普拉斯矩阵$L$总有一个全1的特征向量，所以带着这个维度并不影响聚类，其在本质是一样的。
 
 其二是我用矩阵论进行的理解
-这里正交条件约束了$F$。假设$L$的特征值和单位特征向量分别为$\{\lambda_1, \lambda_2,...,\lambda_N\}$和$\{\alpha_1, \alpha_2,..., \alpha_N\}$，由于$L$对称，所以$\{\alpha_i\}_{i=1..N}$正交。
+这里正交条件约束了$F$。假设$L$的特征值和单位特征向量分别为$\{\lambda_1, \lambda_2,...,\lambda_N\}$和$\{\alpha_1, \alpha_2,..., \alpha_N\}$，由于$L$对称，所以$\left\{\alpha_i\right\}_{i=1..N}$正交。
 倘若有一组$\{\beta_1, \beta_2,..., \beta_k\}$不是特征矩阵，且组成$F$后可以获得更小的损失
-由矩阵论可以得知，对于任意单位向量$\alpha$，都可以将其拆成特征向量之和的形式，即$\alpha = k_1\alpha_1 + k_2\alpha_2 +...+k_N\alpha_N$，其中满足$k_1+k_2+...+k_N = 1$ 可以认为
+由矩阵论可以得知，对于任意单位向量$h$，都可以将其拆成特征向量的加权和的形式，即$h = k_1\alpha_1 + k_2\alpha_2 +...+k_N\alpha_N$，其中满足$k_1^2+k_2^2+...+k_N^2 = 1$。
+倘若按照特征向量的定义，将$L$左乘看作是对该向量关于特征向量方向的伸缩变换，那么可以得到
+$$h^TLh = (k_1\alpha_1 + k_2\alpha_2 +...+k_N\alpha_N) L (k_1\alpha_1 + k_2\alpha_2 +...+k_N\alpha_N)
+= (k_1\alpha_1 + k_2\alpha_2 +...+k_N\alpha_N) (k_1 \lambda_1 \alpha_1 + k_2 \lambda_2 \alpha_2 +...+k_N \lambda_N \alpha_N).$$
+由于$\alpha_i$为彼此正交的特征向量，可以得到$h^T L h = k_1^2\lambda_1 + k_2^2\lambda_2+k_N^2 \lambda_N$，显然其不小于最小的特征值$\min_i \lambda_i$。只有当$F$中列向量$h$取最小的一个或几个特征值时该式取等号。
 
 
 
@@ -183,7 +187,28 @@ $$
 
 $$NCut (A_1, A_2, ... , A_k) = \frac{1}{2} \sum_{i=1}^k \frac{W(A_i, \bar{A_i})}{vol(A_i)} = \frac{1}{2} \sum_{i=1}^k \frac{cut(A_i, \bar{A_i})}{vol(A_i)}  $$
 
-这里的$vol(A_i)$是$A_i$里所有边的度之和，即$vol(A_i) = \sum_{x \in A_i} d_{xx}$。这里采用内部的权值之和来进行约束，又是一种特殊的抑制特解的方式。
+这里的$vol(A_i)$是$A_i$里所有边的度之和，即$vol(A_i) = \sum_{x \in A_i} d_{xx}$。这里采用内部的权值之和来进行约束，又是另外一种特殊的抑制特解的方式。
+类似于RatioCut，NCut可以定义如下式子：
+$$
+  \begin{equation}
+    h_i = \left\{
+      \begin{array} {rcl}
+          \frac{1}{\sqrt{Vol(A)}} & v_i \in A \\
+          0 \quad& v_i \notin A
+      \end{array}
+  \right..
+  \end{equation}
+$$
+这里$Vol(A)$表示A簇内部所有边的距离，即$Vol(A)=\frac{1}{2} \sum_{i,j \in A} w_{ij} = \frac{1}{2} \sum_{i \in A} d_{ii}$。这里和RatioCut较为相似，但是区别在于约束条件不同了，这里$h$不再简单的是单位向量，其与度也有关系。此时优化目标即为下式：
+$$
+\begin{equation}
+\min_F \quad trace(F^T L F) \quad
+s.t. \quad F^TDF = I
+\end{equation}
+$$
+优化该式，换位思考，倘若将$F=D^{-\frac{1}{2}}G$，此时约束条件便转化为$G^TG=I$，而前一项便写作$\min_F \quad trace((D^{-\frac{1}{2}}G))^T L D^{-\frac{1}{2}}G)$
+此时可以看出其与RatioCut的相似性了，只需先对于Laplacian Matrix进行归一化$L^* = D^{-\frac{1}{2}} L D^{-\frac{1}{2}}$，对其做RatioCut即可。
+<!-- 此时$h^TLh = $ -->
 
 ## Lists
 
