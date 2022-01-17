@@ -8,9 +8,10 @@ math: true
 mermaid: true
 ---
 
-## 如何修改Jekyll中的头像 个人名字和个人简介
+## 如何修改Jekyll中的设置
 
-分为博客头像，简介和avatar（网页标题头像），其修改在_config.yml中去修改设置，其中对于我这个模板，与文字有关的设置分别为title和tagline；其中:后面需要加空格或用 '' 将文本括起来(容易成为报错的原因)。
+分为avatar（博客头像），information（简介）和favicon（网页标题头像），其修改在_config.yml中去修改设置，其中对于我这个模板，与文字有关的设置分别为title和tagline；其中":"后面需要加空格，否则会发生报错。
+<!-- 或用 '' 将文本括起来(容易成为报错的原因)。 -->
 
 博客的头像和图片类似，在图床上插入图片并把链接copy到avatar后面。关于网页标题头像则需要在.\assets\img\favicons中修改，其参考官方文档[link0](https://chirpy.cotes.info/posts/customize-the-favicon/)即可，仅需要Generate the favicon即可。
 
