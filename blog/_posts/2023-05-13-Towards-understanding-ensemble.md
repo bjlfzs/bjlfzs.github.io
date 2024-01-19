@@ -1,5 +1,5 @@
 ---
-title:Ensemble, knowledge distillation
+title: Ensemble, knowledge distillation
 author: theq Yang
 date: 2023-05-02 13:00:00 +0800
 categories: [Blogging, Algorithm]
